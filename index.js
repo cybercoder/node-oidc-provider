@@ -23568,7 +23568,9 @@ var require_lib3 = __commonJS({
 // index.ts
 var oidc_exports = {};
 __export(oidc_exports, {
-  default: () => oidc_default
+  default: () => oidc_default,
+  errors: () => errors_exports,
+  interactionPolicy: () => interaction_policy_exports
 });
 module.exports = __toCommonJS(oidc_exports);
 
@@ -24417,6 +24419,14 @@ var nanoid_default = (length, charset) => {
   }
   return nanoid(length);
 };
+
+// node_modules/oidc-provider/lib/helpers/interaction_policy/index.js
+var interaction_policy_exports = {};
+__export(interaction_policy_exports, {
+  Check: () => check_default,
+  Prompt: () => prompt_default,
+  base: () => base
+});
 
 // node_modules/oidc-provider/lib/helpers/interaction_policy/check.js
 var Check = class {
@@ -45370,6 +45380,11 @@ var lib_default = provider_default;
 
 // index.ts
 var oidc_default = lib_default;
+// Annotate the CommonJS export names for ESM import in node:
+0 && (module.exports = {
+  errors,
+  interactionPolicy
+});
 /*! Bundled license information:
 
 ee-first/index.js:
